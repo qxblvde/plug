@@ -31,21 +31,24 @@ pip install googletrans==4.0.0-rc1
 1. В качестве скрипта командной строки
 
 После установки через pip, запускайте утилиту напрямую:
-
+```bash
 translate-comments <file_path> --lang <target_language>
+```
 
 	•	<file_path> — путь к файлу Python с комментариями.
 	•	--lang — целевой язык перевода (по умолчанию: английский en).
 
 Пример:
-
+```bash
 translate-comments my_script.py --lang ru
+```
 
 2. В качестве Python-модуля
 
 Вы можете использовать функцию translate_file_comments из модуля в своих программах:
-
+```bash
 from comment_translator import translate_file_comments
+```
 
 # Переводим комментарии из файла test.py на русский
 output = translate_file_comments("test.py", target_language="ru")
@@ -54,41 +57,34 @@ print(f"Комментарии переведены и сохранены в: {o
 Пример работы
 
 Исходный файл test.py:
-
+```bash
 # This is a simple function
 def add(a, b):
     """
     Adds two numbers and returns the result.
     """
     return a + b
+```
 
 Команда для перевода:
-
+```bash
 translate-comments test.py --lang ru
+```
 
 Результат в test_translated_ru.py:
-
+```bash
 # Это простая функция
 def add(a, b):
     """
     Добавляет два числа и возвращает результат.
     """
     return a + b
+```
 
 Содержимое репозитория
 	•	translate_comments.py — основной файл с логикой перевода.
 	•	setup.py — файл для установки проекта и настройки CLI.
 	•	README.md — документация проекта.
-
-Разработка
-
-Установка зависимостей для разработки:
-
-pip install -r requirements.txt
-
-Проверка работы скрипта локально:
-
-python translate_comments.py <file_path> --lang <target_language>
 
 Автор
 	•	Сивак Максим Сергеевич М3105
