@@ -51,8 +51,11 @@ from comment_translator import translate_file_comments
 ```
 
 # Переводим комментарии из файла test.py на русский
+```bash
+from comment_translator import translate_file_comments
 output = translate_file_comments("test.py", target_language="ru")
 print(f"Комментарии переведены и сохранены в: {output}")
+```
 
 Пример работы
 
@@ -105,5 +108,6 @@ def add(a, b):
 
 ```bash
 translate-comments <file_path> --lang <language>
+```
 
 Эта команда вызывает функцию translate_file_comments, определённую в модуле.
