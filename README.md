@@ -56,8 +56,11 @@ from comment_translator import translate_file_comments
 ```
 
 # Переводим комментарии из файла test.py на русский
+```python
+from comment_translator import translate_file_comments
 output = translate_file_comments("test.py", target_language="ru")
 print(f"Комментарии переведены и сохранены в: {output}")
+```
 
 ## **Пример работы**
 
@@ -69,11 +72,6 @@ def add(a, b):
     Adds two numbers and returns the result.
     """
     return a + b
-```
-
-### **Команда для перевода:**
-```bash
-translate-comments test.py --lang ru
 ```
 
 ### **Результат в `test_translated_ru.py`:**
