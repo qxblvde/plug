@@ -21,12 +21,14 @@
 
 ```bash
 pip install .
+```
 
 ## **2. Установка зависимостей вручную**
 Если вы не используете `setup.py`, установите библиотеку `googletrans` вручную:
 
 ```bash
 pip install googletrans==4.0.0-rc1
+```
 
 ## **Использование**
 
@@ -35,6 +37,7 @@ pip install googletrans==4.0.0-rc1
 
 ```bash
 translate-comments <file_path> --lang <target_language>
+```
 
 **Параметры:**
 - `<file_path>` — путь к файлу Python с комментариями.
@@ -43,12 +46,14 @@ translate-comments <file_path> --lang <target_language>
 **Пример:**
 ```bash
 translate-comments my_script.py --lang ru
+```
 
 ### **2. В качестве Python-модуля**
 Вы можете использовать функцию `translate_file_comments` из модуля в своих программах:
 
 ```python
 from comment_translator import translate_file_comments
+```
 
 # Переводим комментарии из файла test.py на русский
 output = translate_file_comments("test.py", target_language="ru")
@@ -64,10 +69,12 @@ def add(a, b):
     Adds two numbers and returns the result.
     """
     return a + b
+```
 
 ### **Команда для перевода:**
 ```bash
 translate-comments test.py --lang ru
+```
 
 ### **Результат в `test_translated_ru.py`:**
 
@@ -78,6 +85,7 @@ def add(a, b):
     Добавляет два числа и возвращает результат.
     """
     return a + b
+```
 
 ## **Содержимое репозитория**
 - **`translate_comments.py`** — основной файл с логикой перевода.
@@ -99,10 +107,10 @@ def add(a, b):
 
 ```bash
 pip install .
-
+```
 будет доступна команда:
 
 ```bash
 translate-comments <file_path> --lang <language>
-
+```
 Эта команда вызывает функцию translate_file_comments, определённую в модуле.
